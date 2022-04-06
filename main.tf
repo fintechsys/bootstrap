@@ -1,6 +1,6 @@
 module "bootstrap" {
   # source = "../.."
-  source = "git::git@github.com:mojaloop/iac-aws-bootstrap.git?ref=v0.1.0"
+  source = "https://github.com/mojaloop/iac-aws-bootstrap.git"
   tags = {
     "Origin" = "Managed by Terraform"
     "Tenant" = "fintechsys" # The Tenant name (probably the name of the customer - this should be the same as the 'tenant' below)
