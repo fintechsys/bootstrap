@@ -5,7 +5,7 @@ module "bootstrap" {
     "Tenant" = "fintechsys" # The Tenant name (probably the name of the customer - this should be the same as the 'tenant' below)
   }
 
-  domain       = "fintechsys.com" # The FQDN of the tenant
+  domain       = "fintechsys.net" # The FQDN of the tenant
   tenant       = "fintechsys"             # The Tenant name (probably the name of the customer - this should be the same as ths "tenant" above)
   region       = "eu-west-1"         # https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions
   environments = ["dev"]             # Comma Separated list of environments in this tenant.    e.g. ["dev","qa","test1"]
