@@ -1,5 +1,6 @@
 module "bootstrap" {
-  source = "../.."
+  # source = "../.."
+  source = "git::git@github.com:mojaloop/iac-aws-bootstrap.git?ref=v0.1.0"
   tags = {
     "Origin" = "Managed by Terraform"
     "Tenant" = "fintechsys" # The Tenant name (probably the name of the customer - this should be the same as the 'tenant' below)
@@ -7,7 +8,7 @@ module "bootstrap" {
 
   domain       = "fintechsys.net" # The FQDN of the tenant
   tenant       = "fintechsys"             # The Tenant name (probably the name of the customer - this should be the same as ths "tenant" above)
-  region       = "eu-west-1"         # https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions
+  region       = "us-east-1"         # https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions
   environments = ["dev"]             # Comma Separated list of environments in this tenant.    e.g. ["dev","qa","test1"]
 }
 
